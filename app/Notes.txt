@@ -1,0 +1,1 @@
+AngularJS uses kebab-case for its custom attributes and camelCase for the corresponding directives which implement them
