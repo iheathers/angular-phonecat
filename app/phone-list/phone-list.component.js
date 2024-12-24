@@ -4,9 +4,9 @@ function PhoneListController($http) {
     self.orderProp = 'age';
 
     $http.get('phones/phones.json').then(function (res) {
-        debugger
+
         console.log("Inside http: ", this)
-        self.phones = res.data;
+        self.phones = res.data.slice(0, 5);
     })
 }
 

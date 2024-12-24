@@ -25,7 +25,10 @@
 
 
             <ul class="phones">
-                <li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+                <li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp" class="thumbnail">
+                    <a href="#!/phones/{{phone.id}}" class="thumb">
+                        <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}" />
+                    </a>
                     <span>{{phone.name}}</span>
                     <p>{{phone.snippet}}</p>
                 </li>
@@ -35,3 +38,5 @@
 
     </div>
 </div>
+
+<!-- <pre>{{$ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp | json}}</pre> -->
