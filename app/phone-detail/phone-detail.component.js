@@ -1,18 +1,18 @@
-
 function PhoneDetailController($routeParams, $http) {
-
-    // this.phoneId = $routeParams.phoneId;
     var self = this;
 
-    // debugger
+    self.setImage = function setImage(imageUrl) {
+        console.log({ imageUrl })
+        self.mainImageUrl = imageUrl;
+    }
 
     $http
         .get('phones/' + $routeParams.phoneId + '.json')
         .then(function (response) {
             self.phone = response.data
+            self.setImage(self.phone.images[0])
+
         })
-
-
 }
 
 angular
@@ -23,3 +23,5 @@ angular
             PhoneDetailController
         ]
     })
+
+

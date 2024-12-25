@@ -1,6 +1,7 @@
 angular.module('phonecatApp', [
-    'phoneDetail',
     'ngRoute',
+    'core',
+    'phoneDetail',
 
     'phoneList'
 ])
