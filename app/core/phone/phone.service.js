@@ -1,5 +1,6 @@
 
 function configurePhoneResource($resource) {
+    // debugger
     return $resource('phones/:phoneId.json', {}, {
         query: {
             method: 'GET',
